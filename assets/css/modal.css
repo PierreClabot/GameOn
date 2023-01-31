@@ -68,6 +68,8 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
 }
 
 .topnav .icon {
@@ -180,9 +182,10 @@ main {
 
 .modal-confirmation{
   display: none;
-  position: fixed;
-  height: 100vh;
-  left: 0;
+  position: fixed !important;
+  height: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   top: 0;
   z-index: 10;
@@ -190,6 +193,7 @@ main {
   align-items: center;
   justify-content: center;
   color: #f1f1f1;
+  animation-name: none !important;
 }
 .message-confirmation{
   font-size: 36px;
@@ -524,7 +528,7 @@ footer {
     position: relative;
     margin: auto;
     z-index: 10;
-    padding: 0 10%;
+    padding: 0 50px;
     background-color: #ffffff;
   }
 
@@ -570,6 +574,7 @@ footer {
   }
   .content{
     max-width: none;
+    height: 100vh;
   }
   label,.text-control ,.erreur{
     font-size: 14px;

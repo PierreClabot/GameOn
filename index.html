@@ -4,7 +4,7 @@
     <meta charset="utf-8" >
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" >
-    <link rel="stylesheet" href="./css/modal.css" >
+    <link rel="stylesheet" href="./assets/css/modal.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" >
   </head>
@@ -49,13 +49,7 @@
         </button>
       </div>
 
-      <div class="modal-confirmation">
-        <span class="close"></span>
-        <div class="message-confirmation">
-          Merci pour votre inscription
-        </div>
-        <input type="submit" value="Fermer" onclick="closeModal()">
-      </div>
+      
       <div class="bground">
         <div class="content">
           <span class="close"></span>
@@ -149,6 +143,13 @@
             </form>
           </div>
         </div>
+        <div class="modal-confirmation content">
+          <span class="close"></span>
+          <div class="message-confirmation">
+            Merci pour votre inscription
+          </div>
+          <input type="submit" value="Fermer" onclick="closeModal()">
+        </div>
       </div>
     </main>
     <footer>
@@ -157,5 +158,6 @@
       </p>
     </footer>
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/verification.js"></script>
   </body>
 </html>
