@@ -61,7 +61,6 @@ prenom.addEventListener('focusout',()=>{
       // On traite les informations côté backend
       document.reserve.reset();
       modalConfirmation.style.display = "flex";
-      
     }
   
     return false;
@@ -77,6 +76,18 @@ prenom.addEventListener('focusout',()=>{
       erreur = `<span class=erreur >Veuillez entrer 2 caractères ou plus pour le champ du ${champs.toLowerCase()}.</span>`;
       verification = false;
     }
+    else{
+      // Ajout regex nom/prénom
+      let regex = /^[a-z\é\è\ê\ï\ö-]{2,}$/i;
+      let res = saisie.value.match(regex);
+      if(!res)
+      {
+        erreur = `<span class=erreur>Veuillez saisir que des lettres pour votre ${champs.toLowerCase()}.</span>`;
+        verification = false;
+      }
+      console.log(res);
+    }
+
   
     if(erreur != "") // On vérifie qu'il y a une erreur de saisie
     {
